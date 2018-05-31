@@ -97,7 +97,7 @@ $result = mysql_query($sql);
             <div class="row margin-b-40">
                 <div class="col-sm-6">
                     <h2>我们的产品配件</h2>
-                    <p>这个模块展示我们的产品配件，如果想要查看眼镜，<a href="products.php">请点这里</a>。</p>
+                    <p>这个模块展示我们的产品配件，如果想要查看太阳镜，<a href="products.php">请点这里</a>。</p>
                 </div>
             </div>
             <!--// end row -->

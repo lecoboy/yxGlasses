@@ -278,11 +278,14 @@ while($rel_products[$i] = mysql_fetch_assoc($result)) {
                         </h3>
                         <ul style="padding-left: 15px;">
                             <li>
-                                眼镜本体
+                                太阳镜本体
                             </li>
                             <li>
-                                眼镜盒
+                                三角折叠盒
                             </li>
+                            <li>拉链式太阳镜盒</li>
+                            <li>软质超纤维简易太阳镜袋</li>
+                            <li>太阳镜布及精美礼盒包装</li>
                         </ul>
                         <h3 style="font-weight: 500">
                             产品特点
