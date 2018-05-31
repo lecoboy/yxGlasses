@@ -47,7 +47,7 @@ $password = "root";
 $dbname = "db_yxglasses";
  
 // 创建连接
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = @mysql_connect($servername, $username, $password);mysql_select_db($dbname, $conn);
  
 // 检测连接
 if ($conn->connect_error) {
@@ -57,10 +57,10 @@ if ($conn->connect_error) {
 $sql = "INSERT INTO `yx_accessories` (`altImg`, `imgs`, `name`, `describe`, `add_title`, `add_content`, `addTime`, `state`, `price`)
 VALUES ('{$altImg}','{$imgs}','{$name}','{$describe}','{$add_title}','{$add_content}','{$addTime}',{$state},'{$price}')";
 
-if ($conn->query($sql) === TRUE) {
+if (mysql_query($sql) === TRUE) {
     die("true");
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    echo "Error: " . $sql . "<br>" . mysql_error();
 }
 
-$conn->close();
+mysql_close($conn);

@@ -5,14 +5,14 @@ $password = "root";
 $dbname = "db_yxglasses";
  
 // 创建连接
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = @mysql_connect($servername, $username, $password);mysql_select_db($dbname, $conn);
  
 // 检测连接
 if ($conn->connect_error) {
     die("连接失败: " . $conn->connect_error);
 } 
 $sql = "SELECT * FROM yx_accessories";
-$result = $conn->query($sql);
+$result = mysql_query($sql);
 $list = array();
 $i=0;
 if ($result->num_rows > 0) {
@@ -26,6 +26,6 @@ if ($result->num_rows > 0) {
 }
 $data = '{"data":'.json_encode($list).'}';
 
-$conn->close();
+mysql_close($conn);
 
 die($data);

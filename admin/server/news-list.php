@@ -5,14 +5,10 @@ $password = "root";
 $dbname = "db_yxglasses";
  
 // 创建连接
-$conn = new mysqli($servername, $username, $password, $dbname);
- 
-// 检测连接
-if ($conn->connect_error) {
-    die("连接失败: " . $conn->connect_error);
-} 
+$conn = @mysql_connect($servername, $username, $password);mysql_select_db($dbname, $conn);
+
 $sql = "SELECT * FROM yx_news";
-$result = $conn->query($sql);
+$result = mysql_query($sql);
 $list = array();
 $i=0;
 if ($result->num_rows > 0) {
@@ -26,6 +22,6 @@ if ($result->num_rows > 0) {
 }
 $data = '{"data":'.json_encode($list).'}';
 
-$conn->close();
+mysql_close($conn);
 
 die($data);
