@@ -118,7 +118,7 @@ $result = mysql_query($sql);
                                 </div>
                             </div>
                             <h3><a href="product-detail.php?id=<?php echo $row["id"];?>"><?php echo $row["name"];?></a></h3>
-                            <p>零售价：<?php echo $row["doller"];?> 美元</p>
+                            <p>零售价：<?php echo $row["doller"];?> </p>
                             <a class="link" href="product-detail.php?id=<?php echo $row["id"];?>">Read More</a>
                         </div>       
             <?php
