@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="lib/html5shiv.js"></script>
+<script type="text/javascript" src="lib/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.8/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="static/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/style.css" />
+<!--[if IE 6]>
+<script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+<title>添加产品</title>
+<!-- 文件上传 -->
+<link href="lib/webuploader/0.1.5/webuploader.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.table-sort>tbody>tr>td{  
+        text-align:center;  
+}  
+</style>
+</head>
+<body>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 产品管理 <span class="c-gray en">&gt;</span> 添加产品 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<div class="page-container">
+	<form class="form form-horizontal" id="form-admin-add">
+		<input id="fileName" type="hidden" name="fileName" />
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3">基本信息：</label>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>产品名称：</label>
+			<div class="formControls col-xs-8 col-sm-6">
+				<input type="text" class="input-text" value="" placeholder="请输入名称" id="comName" name="name">
+			</div>
+		</div>
+		<div class="row cl" style="display: none;">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>产品型号：</label>
+			<div class="formControls col-xs-8 col-sm-6">
+				<input type="text" class="input-text" value="xxx" placeholder="请输入型号" id="comName" name="type">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>产品价格：</label>
+			<div class="formControls col-xs-8 col-sm-6">
+				<input type="text" class="input-text" value="" placeholder="请输入产品价格" id="comName" name="doller">
+			</div>
+		</div>
+		<div class="row cl" style="display: none;">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>人民币：</label>
+			<div class="formControls col-xs-8 col-sm-6">
+				<input type="text" class="input-text" value="1100" placeholder="请输入人民币价格" id="comName" name="rmb">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3">产品详情：</label>
+			<div class="formControls col-xs-8 col-sm-6">
+				<font color="red">(注：第一张图会作为产品列表中的展示图。图片大小：970x647。)</font>
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>详情图片：</label>
+			<div class="formControls col-xs-8 col-sm-6">
+				<!--dom结构部分-->
+				<div id="mtuploader-demo">
+				    <!--用来存放item-->
+				    <div id="mtfileList" class="uploader-list"></div>
+				    <div id="mtfilePicker">选择图片</div>
+				</div>
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>产品描述：</label>
+			<div class="formControls col-xs-8 col-sm-6">
+				<textarea name="describe" cols="" rows="" class="textarea"  placeholder="说点什么..." dragonfly="true"></textarea>
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>产品特点：</label>
+			<div class="formControls col-xs-8 col-sm-6">
+				<textarea name="trait" cols="" rows="" class="textarea"  placeholder="说点什么..." dragonfly="true"></textarea>
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>产品具体信息：</label>
+			<div class="formControls col-xs-8 col-sm-6">
+				<textarea name="detail" cols="" rows="" class="textarea"  placeholder="说点什么..." dragonfly="true"></textarea>
+			</div>
+		</div>
+		<div class="row cl">
+			<div class="col-xs-8 col-sm-6 col-xs-offset-4 col-sm-offset-3">
+				<input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+			</div>
+		</div>
+	</form>
+</div>
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" src="lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="static/h-ui/js/H-ui.min.js"></script> 
+<script type="text/javascript" src="static/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去-->
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="lib/My97DatePicker/4.8/WdatePicker.js"></script> 
+<script type="text/javascript" src="lib/datatables/1.10.0/jquery.dataTables.min.js"></script> 
+<script type="text/javascript" src="lib/laypage/1.2/laypage.js"></script>
+
+<!-- 表单验证  -->
+<script type="text/javascript" src="lib/jquery.validation/1.14.0/jquery.validate.js"></script> 
+<script type="text/javascript" src="lib/jquery.validation/1.14.0/validate-methods.js"></script> 
+<script type="text/javascript" src="lib/jquery.validation/1.14.0/messages_zh.js"></script>
+
+<!-- 多文件上传 -->
+<script type="text/javascript" src="lib/webuploader/0.1.5/webuploader.min.js"></script> 
+<script type="text/javascript" src="lib/webuploader/0.1.5/mtfileupload.js"></script>
+
+<script type="text/javascript">
+jQuery(mtfileupload("server/upload.php",function(file,res){
+	console.log(res);
+	var str = "";
+	if($("#fileName").val() != ""){
+		str = $("#fileName").val()+";";
+	}
+	$("#fileName").val(str+res._raw);
+}));
+
+$("#form-admin-add").validate({
+	rules:{
+		'name':{
+			required:true
+		},
+		'type':{
+			required:true
+		},
+		'doller':{
+			required:true
+		},
+		'rmb':{
+			required:true
+		},
+		'txt':{
+			required:true
+		},
+		'describe':{
+			required:true
+		},
+		'trait':{
+			required:true
+		},
+		'detail':{
+			required:true
+		},
+	},
+	onkeyup:false,
+	focusCleanup:true,
+	success:"valid",
+	submitHandler:function(form){
+		$(form).ajaxSubmit({
+			type: 'post',
+			url: "server/product-add.php" ,
+			//url: "recruitAction!test" ,
+			success: function(data){
+				if(data == "true"){
+					$("#form-admin-add .input-text,.textarea,#fileName").val("");
+					$("#mtfileList").html("");
+					layer.msg('添加成功!',{icon:1,time:2000});
+				}else{
+					console.log(data);
+					layer.msg(data,{icon:2,time:1000});
+				}
+			},
+            error: function(XmlHttpRequest, textStatus, errorThrown){
+				layer.msg('error!',{icon:1,time:1000});
+			}
+		});
+		var index = parent.layer.getFrameIndex(window.name);
+		parent.$('.btn-refresh').click();
+		parent.layer.close(index);
+	}
+});
+
+//删除问题
+function questionDel(questionId){
+	layer.confirm('确定要删除该问题吗?',function(index){
+		$.ajax({
+			type: 'post',
+			url: 'commonQuestionAction!deleteCommonQuestion',
+			data: {"id":questionId},
+			success: function(data){
+				if(data == "true"){
+					layer.msg('删除成功!',{icon:1,time:1000});
+					table.ajax.reload();
+				}else{
+					layer.msg('删除失败!',{icon:2,time:1000});
+				}
+			},
+			error: function(data){
+				layer.msg('出现错误!',{icon:2,time:1000});
+			}
+		});
+	});
+}
+</script> 
+</body>
+</html>

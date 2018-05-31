@@ -1,0 +1,92 @@
+h2{
+    color: #333;
+    font-size: 26px;
+}
+p{
+    color: #333;
+}
+.flex-control-nav {
+    list-style: none;
+    overflow: hidden;
+}
+.flex-control-nav li {
+    width: 18%;
+    margin-right: 6.6666%;
+    margin-bottom: 6.6666%;
+    float: left;
+}
+/*产品标题*/
+
+.product_title {
+    color: #333;
+    font-size: 30px;
+}
+/*价格*/
+
+.price, .price span {
+    color: #005875;
+    font-size: 26px;
+}
+/*tabs*/
+
+.tabs-wrapper {
+    border: 1px solid #d9d9d9;
+}
+.tabs-wrapper h2,h3{
+    color: #333;
+}
+.tabs-wrapper p,span,li{
+    color: #666;
+    font-size: 14px;
+}
+.tabs-wrapper .tabs-nav {
+    list-style: none;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #f4f4f4;
+    line-height: 26px;
+    overflow: hidden;
+    position: relative;
+}
+.tabs-wrapper .tabs-nav li {
+    float: left;
+    border-right: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+    padding: 5px 10px;
+}
+.tabs-wrapper .tabs-nav li a{
+    line-height: 26px;
+    font-size: 22px;
+    color: #666;
+}
+.tabs-wrapper .tabs-nav .active{
+    border-bottom: 0px solid #d9d9d9;
+}
+.tabs-wrapper .tabs-nav .active a{
+    color: #000;
+}
+.tabs-wrapper .tabs-nav .unuse{
+    border-bottom: 1px solid #d9d9d9;
+}
+.tabs-wrapper .tabs-nav .unuse a{
+    color: #666;
+}
+.tabs-content{
+    padding: 15px;
+}
+.tabs-content ul{
+    padding-left: 15px;
+}
+.products{
+    list-style: none;
+    padding: 0;
+}
+.products li{
+    float: left;
+}
+.products li img{
+    width: 100%;
+}
+.products .price span{
+    font-size: 14px;
+}
